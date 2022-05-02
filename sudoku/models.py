@@ -8,6 +8,6 @@ class Sudoku(models.Model):
         MEDIUM = 'medium'
         HARD = 'hard'
 
-    owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE, null=True)
+    owner = models.ForeignKey(get_user_model(), on_delete=models.CASCADE)
     complexity = models.CharField(choices=ComplexityLevels.choices, max_length=6)
     puzzle = models.CharField(max_length=81)

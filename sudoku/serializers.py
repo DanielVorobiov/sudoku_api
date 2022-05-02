@@ -7,3 +7,4 @@ class SudokuSerializer(serializers.ModelSerializer):
     class Meta:
         model = Sudoku
         fields = '__all__'
+

@@ -21,7 +21,6 @@ class SudokuViewSet(GenericViewSet, CreateModelMixin, UpdateModelMixin, ListMode
             queryset = queryset.filter(owner=self.request.user)
         return queryset
 
-
     def perform_create(self, serializer):
         serializer.save(owner=self.request.user)
 
